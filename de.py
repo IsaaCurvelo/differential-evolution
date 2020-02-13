@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 12 21:54:27 2020
+import numpy as np
+from scipy.optimize import rosen
+from scipy.spatial import distance_matrix
 
-@author: isaac
-"""
+epsilon = np.finfo(float).eps
 
