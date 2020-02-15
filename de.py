@@ -58,4 +58,11 @@ lwr_bnd = np.repeat(-5, dimensions)
 upp_bnd = np.repeat(5, dimensions)
 F = 0.6
 
-p, f = de(rosen, lwr_bnd, upp_bnd, F, n=50, d=dimensions)
+import time
+res = list()
+tmp = list()
+for r in range(30):
+    start = time.time()
+    p, ft = de(rosen, lwr_bnd, upp_bnd, F, n=50, d=dimensions, iterations= 1000)
+    tmp.append(time.time() - start)
+    res.append(min(ft))
